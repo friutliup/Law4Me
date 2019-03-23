@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "law4me",
+  "private_key_id": "0f3a0f695635f6982fb50218f1ee42087ca8e61a",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCySxRvMT/YzXM1\nGtvRtag94rkhAKAdnhf14iOS9x+wZ/u/R3dFW+tTqcJoqM9U4jMC3jZo5laNTC1o\najimR6kdtFi/Ydo2AMfRu/QT6Iw2Bx+1QNcbCD53AgZuJE4dsiSkHIeU0zQPtYjQ\nhhZSaUpgrQQadpciJ/FQJZycWJ9Q4ANDqAYvYBx8kEd3wesq3HBtRxi4dvfDwIGx\nMgioIUkMkwiSuYOdxfj2b9a1B/UFELbFvgAMVuk8j+auU4BHch1rfAZqnq29Cm5Y\nB38mt7C/NdehaB0FZkhRQiRBgM5+rxxcwha1jMuJWRwfzERa2iun0EVZ7J07J/Vx\nK8Ie6YDHAgMBAAECggEARviS/EX+88aodvmnid1FSMkgx03P7qo5QHPRlFVRpG9n\n6za/9/iEfsui6vVTfqcCBkC9KNmTl3A83QT3Yt1AqOXas+f4LCn4YHjwSiJ1+aWx\nTf2vAoAwGUBRnfNOswxwAHGo2KmP3jb1bIgLh6eI513Htd8B/yMmMDCgnC280TyH\nit4CkppUcKN79S6ckcruU2RXeUAUFb6QZD2c+o85llcMokzsnWRCpT9s5O397VDI\n63M2iQ5CV4aeLpLYJeVtmTDAcwrXbvbbHLoJ69AuwuaWpiNzDzgf4H6o14i9NDSh\nOmwjdnd6U3+pg2ZNlkNGmkYaoramySPibJH1tgVciQKBgQDuDa8YdRYVO0vdYykG\nR2eJspxSO6fCgjE4fj9pFLEnvEBMfGznNlpTn5xduIWkrRqu4Pignxgs79Id277J\nE/2eqKUXX3lwuPV4HOdvX1pY0ivZppv/JNKHDcgvTn+7v7jw71PLI/1pznKaNy6Y\nsAHRq6gu1ylNReHaFPbJ9QwTjwKBgQC/vA21YS1W2Dpu+H3kC6a2KSvMt8zu2T/l\neZorqVvJPEJHQiTMx5SgB7oFVw5PMUQMPRF2wn0jY4hhHtanHCmwkkVejVkdnaeN\n9LHnJOC4jNKhf585f+L4cQ7aYNd83ZwQ7ncI77j4yejjE+D+Ya9HrFboQiaF6Gb6\n8CQWik7DSQKBgDvYvNhNN0wHKD90GnA1q1X2zU3vKXHBAVbOhmqIhTEUJqYT8dz+\n0R6M1ebJ6O9JhZfJfzgCRzWk5RIUmJY8rFoi075YhlNMbInR2m0pb7E8xUFmnXk7\nbKH/WQBrn7k3resEf/BmD+N1v2H91X0VYp+vpAyCkyOWGf2Vn6WOMYcJAoGBAIX1\nAS7kQiUW1VyKyIn3ifZjNXLGR6vopTfSieBPZw1lyHi4wbVBC5nzTAhHFnxF02Ep\nmXX71CpRdAtG3HnMt2PiDg1NfCGw8EvB1jnEDi1iVhb3b2tg6lbhxprUZjmbK1q5\nAPmBYx6PEuL0FJIl9ayBwAZtkTSldq2D8fK9luHhAoGBAORnjOdmxx5gljexTCgc\nNKpSA6PzpbHjz/d1hGjjQdXdFkprvFiMMzYg0u3eGQOa2CkW1kioF6kqY3tJomzx\nPaoqCE79G5nFoZL4fHFERC9D9U+1er6Zk1w0Wmk6ubJHZdE6URDu7KTXGeleBkBc\n7CzSdI6Qom9cSLW/NnZfLCVO\n-----END PRIVATE KEY-----\n",
+  "client_email": "drive-608@law4me.iam.gserviceaccount.com",
+  "client_id": "100408550900429415161",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/drive-608%40law4me.iam.gserviceaccount.com"
+}

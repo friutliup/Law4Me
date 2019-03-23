@@ -1,0 +1,22 @@
+{
+  "name": "law4me",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Law4Me.js",
+  "scripts": {
+    "test": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/friutliup/Law4Me.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/friutliup/Law4Me/issues"
+  },
+  "homepage": "https://github.com/friutliup/Law4Me#readme",
+  "dependencies": {
+    "googleapis": "^27.0.0"
+  }
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+ <head>
+
+   <title>Datavis</title>
+
+   <meta charset="utf-8">
+
+ </head>
+
+ <body>
+
+   <div id="root">
+
+    <table>
+      <% for(var i=0; i < filesForFrontEnd.length; i++) { %>
+         <tr>
+           <td><%= filesForFrontEnd[i].id %></td>
+           <td><%= filesForFrontEnd[i].name %></td>
+         </tr>
+      <% } %>
+    </table>
+
+    <% for(var i=0; i < filesForFrontEnd.length; i++) { %>
+      <h1><%= filesForFrontEnd[i].name %></h1>
+    <% } %>
+
+
+
+   </div>
+
+ </body>
+
+</html>
