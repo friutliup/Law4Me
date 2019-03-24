@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/friutliup/Law4Me/issues"
   },
-  "homepage": "https://github.com/friutliup/Law4Me#readme"
+  "homepage": "https://github.com/friutliup/Law4Me#readme",
+  "dependencies": {
+    "multer": "^1.4.1"
+  }
 }

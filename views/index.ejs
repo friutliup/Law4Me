@@ -1,36 +1,335 @@
 <!DOCTYPE html>
-
-<html lang="en">
-
- <head>
-
-   <title>Datavis</title>
-
-   <meta charset="utf-8">
-
- </head>
-
- <body>
-
-   <div id="root">
-
-    <table>
-      <% for(var i=0; i < filesForFrontEnd.length; i++) { %>
-         <tr>
-           <td><%= filesForFrontEnd[i].id %></td>
-           <td><%= filesForFrontEnd[i].name %></td>
-         </tr>
-      <% } %>
-    </table>
-
-    <% for(var i=0; i < filesForFrontEnd.length; i++) { %>
-      <h1><%= filesForFrontEnd[i].name %></h1>
-    <% } %>
+<html>
+<title>LAWFORME</title>
+    <style> 
+        {font-family: "Times New Roman", sans-serif}
+    </style>
 
 
+    <!-- Slideshow next/previous buttons -->
+    <div class="w3-container w3-dark-grey w3-padding w3-xlarge">
+      <div class="w3-left" onclick="plusDivs(-1)"></i></div>
+      <div class="w3-right" onclick="plusDivs(1)"></i></div>
+    
+      <div class="w3-center">
+        <span class="w3-tag demodots w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
+        <span class="w3-tag demodots w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
+        <span class="w3-tag demodots w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
+          
+      </div>
+    </div>
+  </div>
+  
 
-   </div>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<body style =  background-color: linear-gradient( #9999FF 50%, #ffffff 50%);> </body>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body, h1,h2,h3,h4,h5,h6 {font-family: "Verdana", sans-serif }
 
- </body>
+/* Set the width of the sidebar to 120px */
+.w3-sidebar {width: 120px;background: #ffffff
+    ;}
+/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+#main {margin-left: 120px}
+/* Remove margins from "page content" on small screens */
+@media only screen and (max-width: 600px) {#main {margin-left: 0}}
+ img {
+  float: right;
+    </style>
 
+<!-- Icon Bar (Sidebar - hidden on small screens) -->
+<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
+  <!-- Avatar image in top left corner -->
+  <img src="/w3images/avatar_smoke.jpg" style="width:100%">
+  <a href="#" class="w3-bar-item w3-button w3-padding-large w3-black">
+    <i class="fa fa-home w3-xxlarge"></i>
+    <p>HOME</p>
+  </a>
+  <a href="#education" class="w3-bar-item w3-button w3-padding-large w3-hover-purple">
+    <i class="fa fa-user w3-xxlarge"></i>
+    <p>EDUCATION</p>
+  </a>
+  <a href="#resources" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-envelope w3-xxlarge"></i>
+    <p>RESOURCES</p>
+  </a>
+  <a href="#mental and physical health" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-eye w3-xxlarge"></i>
+    <p>MENTAL AND PHYSICAL HEALTH</p>
+  </a>
+    <a href="#documents" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-envelope w3-xxlarge"></i>
+    <p>DOCUMENTS</p>
+  </a>
+</nav>
+
+<!-- Navbar on small screens (Hidden on medium and large screens) -->
+<div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
+  <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
+    <a href="#" class="w3-bar-item w3-button" style="width:25% !important">HOME</a>
+    <a href="#education" class="w3-bar-item w3-button" style="width:25% !important">EDUCATION</a>
+    <a href="#resources" class="w3-bar-item w3-button" style="width:25% !important">RESOURCES</a>
+    <a href="#mental and physical health" class="w3-bar-item w3-button" style="width:25% !important">MENTAL AND PHYSICAL HEALTH</a>
+    <a href="#resources" class="w3-bar-item w3-button" style="width:25% !important">RESOURCES</a>
+  </div>
+</div>
+
+<!-- Page Content -->
+<div class="w3-padding-large" id="main">
+  <!-- Header/Home -->
+  <header class= id="home">
+    <h1 class="w3-jumbo" >  
+        <font face="arial" color="black"><center>L A W F O R M E </center></font>
+      </h1>
+<center> WHO WE ARE: LAWFORME IS A DIGITAL SITE THAT PREPARES YOU FOR ANY UPCOMING LEAGAL BATTLES. IT IS DESIGNED TO GUIDE YOU THROUGH THE PROCESS OF COURT BY PROVIDING IMPORTANT INFORMATION AND EDUCATING YOU ON WHAT TO DO. IT INCLUDES A MENTAL HEALTH ASPECT AND A DOCUMENT SECTION THAT ADDRESSES NOT ONLY YOUR PHYSICAL NEEDS, BUT ALSO KEEPS YOU MOTIVATED AND IN CHECK. <br> CREATED BY US, DESIGNED FOR YOU.</br> </center></P> 
+    
+
+      <!-- Grid -->
+  <div class="w3-row w3-container">
+    <div class="w3-center w3-padding-64">
+      <span class="w3-xlarge w3-bottombar w3-border-dark-grey w3-padding-16">What We Offer</span>
+    </div>
+    <div class="w3-col l3 m6 w3-black w3-container w3-padding-16">
+      <h3>Educate</h3>
+      <p>If you, or a loved one is ever involved in a difficult legal situation, we are here to teach you through the process.</p>
+    </div>
+
+    <div class="w3-col l3 m6 w3-grey w3-container w3-padding-16">
+      <h3>Resources</h3>
+      <p>We provide a variety of factual resources to guide you, both physically and mentally, through your case. </p>
+    </div>
+
+    <div class="w3-col l3 m6 w3-dark-grey w3-container w3-padding-16">
+      <h3>Mental/Physical Help</h3>
+      <p>Quotes and suggestions from different reliable sources are included to keep you in an optimistic, mental state.</p>
+    </div>
+
+    <div class="w3-col l3 m6 w3-black w3-container w3-padding-16">
+      <h3>Documents</h3>
+      <p>A location where you can keep track of all your legal documents is provided to help with your organization.</p>
+    </div>
+  </div>
+        <h2> 
+            SIGN IN:</h2>
+         </header>
+   <img src="https://lh3.googleusercontent.com/eMua4aswVrFmoMbB32JykUZbwokvQD891huWpO-hUpleqfjH8oe7-8RxT9e78fggngzB06AXRPCEDxeX4dBOWmg7pt4Dj3VZOVr6BzX0xOFjgAIbdPWQlMSEgZWgxAGT_qgFJdc=w2400" align='left'>
+    <form action="/action_page.php" target="_blank">
+      <p><input class=" w3-padding-16" type="text" placeholder="Email" required name="Email"></p>
+      <p><input class=" w3-padding-16" type="text" placeholder="Password" required name="Password"></p>
+        </head>
+ 
+      <p>
+        <button class="w3-button w3-light-grey w3-padding-large" type="submit">
+          <i class= </i> LOG IN
+        </button>
+      </p>
+    </form>
+    </body>
+    <p>
+    </p>
+  
+
+    <!-- Grid for pricing tables -->
+    <h3 class="w3-padding-16 ">DONATE:</h3>
+    <div class="w3-row-padding" style="margin:0 -16px">
+      <div class="w3-half w3-margin-bottom">
+        <ul class="w3-ul w3-dark-gray w3-center w3-opacity w3-hover-opacity-off">
+          <li class="w3-black w3-xlarge w3-padding-32">Families In Need</li>
+          <li class="w3-padding-16">Raises awareness for domestic violence</li>
+          <li class="w3-padding-16">Funds families suffering from poverty</li>
+          <li class="w3-padding-16">Supports the cause of keeping families together</li>
+      
+          <li class="w3-padding-16">
+            <h2>$ 10</h2>
+            <span class="w3-opacity">Starting Price</span>
+          </li>
+          <li class="w3-light-grey w3-padding-24">
+            <button class="w3-button w3-white w3-padding-large w3-hover-black">DONATE</button>
+          </li>
+        </ul>
+      </div>
+        
+      <div class="w3-half">
+        <ul class="w3-ul w3-dark-gray w3-center w3-opacity w3-hover-opacity-off">
+          <li class="w3-black w3-xlarge w3-padding-32">Children and Foster Cares</li>
+          <li class="w3-padding-16">Helps ensure the safety of foster children</li>
+          <li class="w3-padding-16">Provides food and clothing for the underprivelidged</li>
+          <li class="w3-padding-16">Allows children to get educations</li>
+   
+          <li class="w3-padding-16">
+            <h2>$ 25</h2>
+            <span class="w3-opacity">Starting Price</span>
+          </li>
+          <li class="w3-light-grey w3-padding-24">
+            <button class="w3-button w3-white w3-padding-large w3-hover-black">DONATE</button>
+          </li>
+        </ul>
+      </div>
+
+
+  </header>
+
+  <!-- Education Section -->
+<p> </p>
+<br>
+<div class="w3-content w3-justify w3-text-grey w3-padding-66" id="education">
+    <h2 class="w3-text-black">Education</h2>
+    <hr style="width:200px" class="w3-opacity">
+    <p>So you’ve decided to get divorced. But now what? Before you do anything, take a few minutes, days maybe even weeks to study the “system”. What do you need to do first? Often times it’s NOT filing for divorce. Most often it’s making sure that you are safe and educated. Start learning what documents and terminology you will be using for the next long while, and start researching lawyers.
+
+    <div class="w3-row-padding w3-center w3-margin-top">
+<div class="w3-third">
+  <div class="w3-card w3-container" style="min-height:460px">
+  <h3>Family Law</h3><br>
+  <i class="fa fa-diamond w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
+  <p>Family Law consists of rules and regulations and court procedures that monitor familial relationships. It's goal is to prevent emotional and physical abuse within a family for both adults and children. </p>
+  
+  </div>
+</div>
+    <div class="w3-third">
+  <div class="w3-card w3-container" style="min-height:460px">
+  <h3>The Civil Court</h3><br>
+  <i class="fa fa-css3 w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
+  <p>The Civil Court handles legal issues that do not involve crimes or other similar legal violations. It centers around problems regarding patent law or divorce litigations. </p>
+ 
+  </div>
+</div>
+
+<div class="w3-third">
+  <div class="w3-card w3-container" style="min-height:460px">
+  <h3>Further Terms</h3><br>
+  <i class="fa fa-desktop w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
+  <p>A plaintiff: the person who initiates a court action by filing a complaint.</p>
+  <p>A defendant: the person against whom an action is brought in a court of law.</p>
+  <p>The Supreme Court: a judicial decider in the court of a particular state </p>
+
+  </div>
+</div>
+</div>
+    </p>
+
+    </div>
+            
+<div class="w3-content w3-justify w3-text-grey w3-padding-64" id="resources">
+    <h2 class="w3-text-black">Resources</h2>
+    <hr style="width:200px" class="w3-opacity">
+    <br>
+    <p>There are so many resources to take advantage of when you are going through a hard time and need more support. Do not be afraid or embarrassed to reach out, either via phone, email, or live chat. Sometimes having someone with you can make it easier to reach out.
+Search your states resources for help regarding rent, food, and heating.
+    </br>
+ <br>       
+        
+<a 
+   href="https://www.hud.gov/topics/rental_assistance">Rental Assistance</a>
+    </br> 
+<br>
+SNAP offers nutrition assistance to millions of eligible, low-income individuals and families and provides economic benefits to communities. SNAP is the largest program in the domestic hunger safety net. The Food and Nutrition Service works with State agencies, nutrition educators, and neighborhood and faith-based organizations to ensure that those eligible for nutrition assistance can make informed decisions about applying for the program and can access benefits. FNS also works with State partners and the retail community to improve program administration and ensure program integrity
+</br> 
+<br> 
+<a href="https://www.fns.usda.gov/snap/supplemental-nutrition-assistance-program-snap">SNAP</a>
+</br>
+<br>
+Temporary Assistance for Needy Families is one of the United States of America's federal assistance programs. It began on July 1, 1997, and succeeded the Aid to Families with Dependent Children program, providing cash assistance to indigent American families through the United States Department of Health and Human Services. This cash benefit is often referred to simply as "welfare."
+</br> 
+<br>
+<a href="https://www.acf.hhs.gov/ofa/programs/tanf">Assistance Programs</a>
+</br>
+<br> 
+The National Domestic Violence Hotline is a 24-hour confidential service for survivors, victims and those affected by domestic violence, intimate partner violence and relationship abuse. The Hotline advocates are available at 1-800-799-SAFE and through online chatting at www.TheHotline.org. All calls are free and confidential. The NDVH was created through the Violence Against Women Act in the United States. The Domestic Violence Hotline offers a variety of help options. The website has different tabs to educate people on different topics such as domestic violence, financial abuse, LGBTQ relationship abuse, domestic violence policy updates, advocate information, what to expect when calling The Hotline, and life after abuse and domestic violence. The National Domestic Violence Hotline launched loveisrespect, the ultimate resource to empower youth to prevent and end dating abuse and promote healthy dating relationships. It is a project of the National Domestic Violence Hotline.
+</br> 
+<br>
+
+<a href="https://www.thehotline.org/">The Hotline</a>
+</br> 
+   <img src="https://lh3.googleusercontent.com/2k16MDuLmjxGt7UoNn5egFRDui34tv5_HJqqZtl5YLA0Wj5wCwF4PR3hokZgzquT_xjJzzq9PLC2dYE0aXLEZIxhGys-9Cf-T2dgCpEq18dG28QlV2qmgF3njZBcyJ863_RLSMg=w2400" align='left'>
+
+
+    </p>
+  <!-- End Portfolio Section -->
+   
+  <!-- End Contact Section -->
+  </div>
+  <div class="w3-content w3-justify w3-text-grey w3-padding-66" id="mental and physical health">
+    <h2 class="w3-text-black">Mental and Physical Health</h2>
+    <hr style="width:200px" class="w3-opacity">
+    <p>
+        Going through the legal system can have a very huge impact on one’s emotional and physical health. Take extra care before during and after your journey to make sure youre in top form. If you ever feel overwhelmed by your emotions, there are some techniques you can follow to better your mental state: 
+<br>
+
+        <button type="button">Daily Motivational Quote</button>
+      </br>
+        <br> 
+        1. Touch various objects around you: your clothing, your phone, utensils, or the wall
+      </br> 
+    <br>
+        2. Dig your heels into the floor, and notice the tension centered in your heels as you do this. Remind yourself you are connected to the ground.
+</br>
+<br>
+        3. Carry a grounding object in your pocket, which you can touch whenever you feel triggered.
+</br>
+<br>
+        4. Clench and release your fists.
+</br>
+<br>
+        5. Focus on your breathing, notice each inhale and exhale. Continue for 10 slow, deep breaths.
+</br> 
+<br>
+        6. Eat something, describing the flavors to yourself.
+</br>
+<br>
+        7. Scan the room and notice five things you see in detail.
+</br> 
+<br>
+        8. Describe an everyday activity in great detail, for example getting up in the morning, or going to school. 
+</br>
+
+<div class="w3-content w3-justify w3-text-grey w3-padding-66" id="documents">
+    <h2 class="w3-text-black">Documents</h2>
+    <hr style="width:200px" class="w3-opacity">
+    <p>
+       You’ll be swimming in documents soon. They can seem overwhelming, confusing and scary. Take a few minutes to look some over and familiarize yourself with them. Also, it is very important to develop a file system where documents are organized so you can get to them quickly and keep them safe from prying eyes. 
+        <br> </br> 
+        <br>  <button type="button">
+<a href="networth%20statement%20pdf.pdf" target="_blank">Networth Statement</a></button></br>
+<br>
+<button type="button">
+<a href="Order%20Assigning%2018-B%20Law%20Guardian.pdf" target="_blank">Order Assigning Law</a></button> </br>
+<br><button type="button">
+<a href="Order%20of%20Protection.pdf" target="_blank">Order of Protection</a></button>
+</br>
+<br><button type="button">
+<a href="Parenting%20Plan.pdf" target="_blank">Parenting Plan</a></button>
+</br>
+<br><button type="button">
+<a href="Temp%20Order%20of%20Protection.pdf" target="_blank">Temp Order of Protection</a></button>
+</br>
+<br><form action ="http://localhost:3000/mydocs" method="GET">
+    <button>My Forms</button>
+    </form>
+</br>
+
+
+ <!-- Contact Section -->
+  <div class="w3-padding-64 w3-content w3-text-grey" id="contact">
+    <h2 class="w3-text-black">Contact Us</h2>
+    <hr style="width:200px" class="w3-opacity">
+
+    <div class="w3-section">
+      <p><i class="fa fa-map-marker fa-fw w3-text-dark-gray w3-xxlarge w3-margin-right"></i> Boston, US</p>
+      <p><i class="fa fa-phone fa-fw w3-text-dark-gray w3-xxlarge w3-margin-right"></i> Phone: 000-000-0000</p>
+      <p><i class="fa fa-envelope fa-fw w3-text-dark-gray w3-xxlarge w3-margin-right"> </i> Email: gmail@gmail.com</p>
+    </div><br>
+
+    </p>
+
+        
+    </p>
+
+   
+</div>
+
+
+</body>
 </html>

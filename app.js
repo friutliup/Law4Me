@@ -4,6 +4,9 @@ const port = 3000
 const fs = require('fs');
 const readline = require('readline');
 const {google} = require('googleapis');
+const bodyparser = require("body-parser");
+var multer = require('multer');
+var upload = multer({ dest: 'public/uploads' })
 
 // If modifying these scopes, delete token.json.
 const SCOPES = ['https://www.googleapis.com/auth/drive.metadata.readonly',
@@ -13,10 +16,11 @@ const SCOPES = ['https://www.googleapis.com/auth/drive.metadata.readonly',
 // created automatically when the authorization flow completes for the first
 // time.
 const TOKEN_PATH = 'token.json';
-
+app.use(bodyparser.urlencoded({extended: true}));
+//app.use(express.static(__dirname, 'public'));
 app.set('view engine', 'ejs');
 
-app.get('/', (req, res) => {
+app.get('/mydocs', (req, res) => {
     // Load client secrets from a local file.
     fs.readFile('credentials.json', (err, content) => {
         if (err) return console.log('Error loading client secret file:', err);
@@ -31,7 +35,7 @@ app.get('/', (req, res) => {
                     files.map((file) => {
                         console.log(`${file.name} (${file.id})`);
                     });
-                    res.render('index', {
+                    res.render('secretdoc', {
                         filesForFrontEnd: files
                     })
                 } else {
@@ -42,24 +46,58 @@ app.get('/', (req, res) => {
         });        
     });
 });
+/**
+ * Inserts document on button click
+ */
+app.post('/mydocs', upload.single('file'), (req,res) => {
+     // Load client secrets from a local file.
+     console.log(req.file.filename);
+     console.log(req.file.originalname);
+     fs.readFile('credentials.json', (err, content) => {
+        if (err) return console.log('Error loading client secret file:', err);
+        // Authorize a client with credentials, then call the Google Drive API.
+        authorize(JSON.parse(content), (auth) => {
+            const drive = google.drive({version: 'v3', auth});
+            var fileMetadata = {
+            'name': req.file.originalname,
+            'parents': ['appDataFolder']
+          };
+          var media = {
+            mimeType: 'application/json',
+            body: fs.createReadStream("public/uploads/" + req.file.filename)
+          };
+          drive.files.create({
+            resource: fileMetadata,
+            media: media,
+            fields: 'id'
+          }, function (err, file) {
+            if (err) {
+              // Handle error
+              console.error(err);
+            } else {
+              console.log('Folder Id:', file.data.id);
+            }
+            res.send("yay");
+          });
+        });        
+    });
+    
+      
+});
 
-app.get('/test', (req, res) => {
 
- res.render('index', {
 
-   body: 'lskjfldkjf',
 
-   another: 'HELLO'
+app.get('/', (req, res) => {
+
+ res.render('index');
 
  })
 
 
-})
 
 
-
-
-
+/**************************************************************************************************Helper Methods */
 /**
  * Create an OAuth2 client with the given credentials, and then execute the
  * given callback function.
@@ -117,7 +155,7 @@ function getAccessToken(oAuth2Client, callback) {
 function listFiles(auth) {
   const drive = google.drive({version: 'v3', auth});
   drive.files.list({
-    //spaces: 'appDataFolder',
+    spaces: 'appDataFolder',
     pageSize: 10,
     fields: 'nextPageToken, files(id, name)',
   }, (err, res) => {
@@ -137,10 +175,27 @@ function listFiles(auth) {
 function listFilesWithCallback(auth, callback) {
     const drive = google.drive({version: 'v3', auth});
     drive.files.list({
-      //spaces: 'appDataFolder',
+      spaces: 'appDataFolder',
       pageSize: 10,
       fields: 'nextPageToken, files(id, name)',
     }, callback);
   }
+
+
+/**
+ * ****************************************************************************************functions to remove a document
+ */
+
+/**
+ * Permanently delete a file, skipping the trash.
+ *
+ * @param {String} fileId ID of the file to delete.
+ */
+/*function deleteFile(fileId) {
+    var request = gapi.client.drive.files.delete({
+      'fileId': fileId
+    });
+    request.execute(function(resp) { });
+  }*/
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))
